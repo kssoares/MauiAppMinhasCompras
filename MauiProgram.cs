@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Text.Json.Serialization;
+//using Windows.ApplicationModel.Activation;
 
 namespace MauiAppMinhasCompras
 {
@@ -13,10 +15,13 @@ namespace MauiAppMinhasCompras
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Quicksand_Bold.otf", "QuicksandBold");
+                    fonts.AddFont("Quicksand_Book.otf", "QuicksandBook");
                 });
 
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
